@@ -10,6 +10,7 @@ The goal was to perform the complete data analysis workflow, starting from data 
 ## 📂 Dataset
 
 - **Dataset:** Online Retail Dataset
+- **Source:** https://archive.ics.uci.edu/dataset/352/online+retail
 - **Rows:** 541,910
 - **Columns:** 8
 
