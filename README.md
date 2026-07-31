@@ -1,135 +1,332 @@
-# 📊 Online Retail Sales Analysis using Microsoft Excel
+# 📊 Online Retail Sales Analysis using Excel & Power BI
 
-## 📌 Project Overview
+Transforming raw retail transactions into interactive business insights through data cleaning, modeling, DAX, and dashboard design.
 
-This project analyzes the **Online Retail** dataset using **Microsoft Excel**.  
-The goal was to perform the complete data analysis workflow, starting from data auditing and cleaning, then preparing the data, calculating KPIs, answering business questions using Pivot Tables, and finally extracting actionable business insights and recommendations.
+<p align="center">
+  <img src="online-retail-sales-project/dashboard.png" width="100%">
+</p>
 
 ---
 
-## 📂 Dataset
+# 📑 Table of Contents
 
-- **Dataset:** Online Retail Dataset
-- **Source:** https://archive.ics.uci.edu/dataset/352/online+retail
+- [Project Overview](#-project-overview)
+- [Dataset](#-dataset)
+- [Tools & Technologies](#-tools--technologies)
+- [Project Workflow](#-project-workflow)
+- [Data Cleaning](#-data-cleaning)
+- [Data Model](#-data-model)
+- [DAX Measures](#-dax-measures)
+- [Dashboard Features](#-dashboard-features)
+- [Business Questions](#-business-questions)
+- [Key Insights](#-key-insights)
+- [Business Recommendations](#-business-recommendations)
+- [Project Structure](#-project-structure)
+- [Skills Demonstrated](#-skills-demonstrated)
+- [Future Improvements](#-future-improvements)
+- [Author](#-author)
+
+---
+
+# 📌 Project Overview
+
+This project presents a complete end-to-end sales analysis of the **Online Retail Dataset** using **Microsoft Excel** and **Microsoft Power BI**.
+
+The project follows the complete analytics workflow:
+
+- Data Auditing
+- Data Cleaning
+- Feature Engineering
+- Exploratory Data Analysis (EDA)
+- Business Analysis
+- Data Modeling
+- DAX Calculations
+- Interactive Dashboard Design
+- Business Insights & Recommendations
+
+The objective is to transform raw transactional data into meaningful insights that support business decision-making.
+
+---
+
+# 📂 Dataset
+
+**Dataset:** Online Retail Dataset
+
+**Source**
+
+https://archive.ics.uci.edu/dataset/352/online+retail
+
+### Dataset Information
+
 - **Rows:** 541,910
 - **Columns:** 8
 
-### Columns
-
-- InvoiceNo
-- StockCode
-- Description
-- Quantity
-- InvoiceDate
-- UnitPrice
-- CustomerID
-- Country
+| Column |
+|---------|
+| InvoiceNo |
+| StockCode |
+| Description |
+| Quantity |
+| InvoiceDate |
+| UnitPrice |
+| CustomerID |
+| Country |
 
 ---
 
-## 🛠️ Tools Used
+# 🛠 Tools & Technologies
 
 - Microsoft Excel
+- Microsoft Power BI
+- Power Query
+- DAX
 - Pivot Tables
-- Excel Functions
-- Data Filtering & Sorting
+- Data Modeling
 
 ---
 
-## 🧹 Data Cleaning Process
+# 🔄 Project Workflow
 
-During the data cleaning phase, the following checks were performed:
+```text
+Raw Dataset
+      │
+      ▼
+Data Auditing
+      │
+      ▼
+Data Cleaning
+      │
+      ▼
+Feature Engineering
+      │
+      ▼
+Exploratory Data Analysis
+      │
+      ▼
+Business Questions
+      │
+      ▼
+Power BI Data Model
+      │
+      ▼
+DAX Measures
+      │
+      ▼
+Interactive Dashboard
+      │
+      ▼
+Business Insights
+      │
+      ▼
+Recommendations
+```
 
-- Checked for missing values
-- Identified duplicate records
-- Investigated negative quantities
-- Checked zero unit prices
-- Verified data types
-- Investigated cancelled orders
-- Created calculated columns:
-  - Total Sales
-  - Year
-  - Month
-  - Day Name
-  - Hour
-  - Quarter
+---
+
+# 🧹 Data Cleaning
+
+The dataset was thoroughly examined before visualization.
+
+### Data Cleaning Steps
+
+- Checked missing values
+- Investigated duplicate records
+- Validated data types
+- Investigated cancelled invoices
+- Investigated returned transactions
+- Reviewed zero Unit Price records
+- Removed unnecessary inconsistencies
+- Created additional calculated columns
+
+### Created Columns
+
+- Total Sales
+- Year
+- Month
+- Day
+- Day Name
+- Hour
+- Quarter
 
 ### Cleaning Decisions
 
-- Missing `CustomerID` values were retained because they may represent anonymous customers.
-- Negative quantities were kept because they represent returned orders.
-- Orders with `UnitPrice = 0` were investigated instead of being removed.
-- Duplicate rows were identified during the audit.
+- Missing Customer IDs were retained because they may represent anonymous customers.
+- Returned transactions were preserved for return analysis.
+- Zero-priced records were investigated instead of being removed.
+- Duplicate records were identified during the auditing phase.
+
+<p align="center">
+  <img src="online-retail-sales-project/cleaned-data.png" width="100%">
+</p>
 
 ---
 
-## 📈 KPIs
+# ⭐ Data Model
 
-The following KPIs were calculated:
+A **Star Schema** was implemented in Power BI to improve performance and support time intelligence calculations.
 
-- Total Revenue
-- Total Orders
-- Total Customers
-- Total Quantity Sold
+### Fact Table
+
+- Cleaned Online Retail
+
+### Dimension Table
+
+- DimDate
+
+<p align="center">
+  <img src="online-retail-sales-project/data-model.png" width="100%">
+</p>
+
+---
+
+# 🧮 DAX Measures
+
+The dashboard includes several business measures:
+
+- Revenue
+- Orders
+- Customers
+- Products Sold
 - Average Order Value
+- Average Basket Size
+- Return Amount
+- Return %
+- Revenue MTD
+- Revenue YTD
+- Previous Month Revenue
+- Growth %
 
 ---
 
-## 📊 Business Questions
+# 📊 Dashboard Features
 
-This project answers the following business questions:
+The Power BI dashboard includes:
 
-1. What are the top 10 products by revenue?
-2. What are the top 10 products by quantity sold?
-3. Which month generated the highest revenue?
-4. Which country generated the highest revenue?
-5. Who are the top customers?
-6. Which products are returned the most?
+- KPI Cards
+- Monthly Revenue Trend
+- Sales by Country Map
+- Top Countries Analysis
+- Top Returned Products
+- Interactive Slicers
+- Custom Tooltips
+- Responsive Layout
+
+<p align="center">
+  <img src="online-retail-sales-project/dashboard.png" width="100%">
+</p>
 
 ---
 
-## 💡 Key Insights
+# 📈 Business Questions
 
-- "DOTCOM POSTAGE" generated the highest revenue.
-- "WORLD WAR 2 GLIDERS ASSTD DESIGNS" was the best-selling product by quantity.
-- November generated the highest revenue.
+This project answers important business questions such as:
+
+- What is the total revenue?
+- How many orders were completed?
+- Which month generated the highest revenue?
+- Which countries generate the highest revenue?
+- Which products contribute the most revenue?
+- Which products have the highest returns?
+- What is the overall return percentage?
+
+---
+
+# 📈 Excel Analysis
+
+Before building the Power BI dashboard, exploratory analysis was performed in Excel using Pivot Tables.
+
+<p align="center">
+  <img src="online-retail-sales-project/revenue-by-month-pivot.png" width="100%">
+</p>
+
+---
+
+# 💡 Key Insights
+
 - The United Kingdom generated the highest revenue.
-- Customer **14646** generated the highest revenue.
-- "Printing smudges/thrown away" was the most returned product.
+- November recorded the highest monthly revenue.
+- Revenue is concentrated in a small number of countries.
+- Several products experience significantly higher return volumes than others.
+- Sales show clear seasonal patterns throughout the year.
+
+<p align="center">
+  <img src="online-retail-sales-project/insights-recommendations.png" width="100%">
+</p>
 
 ---
 
-## ✅ Recommendations
+# ✅ Business Recommendations
 
-- Maintain sufficient inventory for best-selling products.
-- Increase marketing efforts before November.
-- Focus on retaining high-value customers through loyalty programs.
+- Maintain sufficient inventory for top-selling products.
+- Increase marketing campaigns before peak sales months.
 - Investigate products with high return rates.
-- Continue strengthening the UK market while exploring opportunities in other countries.
+- Strengthen customer retention strategies.
+- Expand business opportunities in high-performing countries.
 
 ---
 
-## 📁 Repository Contents
+# 📁 Project Structure
 
-- Online_Retail_Project.xlsx
-- README.md
+```text
+online-retail-sales-analysis
+
+│
+├── Excel
+│   ├── Cleaning Workbook.xlsx
+│   └── Analysis Workbook.xlsx
+│
+├── Power BI
+│   └── Online Retail Dashboard.pbix
+│
+├── online-retail-sales-project
+│   ├── dashboard.png
+│   ├── cleaned-data.png
+│   ├── data-model.png
+│   ├── revenue-by-month-pivot.png
+│   └── insights-recommendations.png
+│
+├── README.md
+└── LICENSE
+```
 
 ---
 
-## 🚀 Future Improvements
+# 🚀 Skills Demonstrated
 
-- Rebuild the analysis using SQL.
-- Create an interactive Power BI dashboard.
-- Perform advanced customer segmentation.
-- Build sales forecasting models using Python.
+- Data Cleaning
+- Data Auditing
+- Feature Engineering
+- Exploratory Data Analysis (EDA)
+- Business Analysis
+- Data Modeling
+- Power Query
+- DAX
+- Dashboard Design
+- Data Visualization
+- KPI Development
+- Storytelling with Data
 
 ---
 
-## 👨‍💻 Author
+# 🔮 Future Improvements
+
+- SQL version of the project
+- Customer Segmentation (RFM Analysis)
+- Sales Forecasting using Python
+- Predictive Analytics
+- Power BI Service Deployment
+
+---
+
+# 👨‍💻 Author
 
 **Mohamed Hamouda**
 
-Junior Data Analyst (Aspiring)
+Aspiring Data Analyst
 
-GitHub:
-https://github.com/MohamedHamouda220
+- GitHub: https://github.com/MohamedHamouda220
+- LinkedIn: https://www.linkedin.com/in/mohammed-hamouda-394b6b416/
+
+---
+
+⭐ If you found this project useful, consider giving it a star.
