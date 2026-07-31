@@ -3,7 +3,7 @@
 Transforming raw retail transactions into interactive business insights through data cleaning, modeling, DAX, and dashboard design.
 
 <p align="center">
-  <img src="online-retail-sales-project/dashboard.png" width="100%">
+  <img src="images/dashboard.png" width="100%">
 </p>
 
 ---
@@ -156,7 +156,7 @@ The dataset was thoroughly examined before visualization.
 - Duplicate records were identified during the auditing phase.
 
 <p align="center">
-  <img src="online-retail-sales-project/cleaned-data.png" width="100%">
+  <img src="images/cleaned-data.png" width="100%">
 </p>
 
 ---
@@ -174,7 +174,7 @@ A **Star Schema** was implemented in Power BI to improve performance and support
 - DimDate
 
 <p align="center">
-  <img src="online-retail-sales-project/data-model.png" width="100%">
+  <img src="images/data-model.png" width="100%">
 </p>
 
 ---
@@ -236,7 +236,7 @@ This project answers important business questions such as:
 Before building the Power BI dashboard, exploratory analysis was performed in Excel using Pivot Tables.
 
 <p align="center">
-  <img src="online-retail-sales-project/revenue-by-month-pivot.png" width="100%">
+  <img src="images/revenue-by-month-pivot.png" width="100%">
 </p>
 
 ---
@@ -250,7 +250,7 @@ Before building the Power BI dashboard, exploratory analysis was performed in Ex
 - Sales show clear seasonal patterns throughout the year.
 
 <p align="center">
-  <img src="online-retail-sales-project/insights-recommendations.png" width="100%">
+  <img src="images/insights-recommendations.png" width="100%">
 </p>
 
 ---
